@@ -1,9 +1,13 @@
 from abc import ABC, abstractmethod
 
 from types import TracebackType
+from typing import Hashable
 
 
-class Startable(ABC):
+class Startable(ABC, Hashable):
+    def __init__(self):
+        self.dependencies: set[Startable] = set()
+
     @abstractmethod
     def start(self) -> None:
         pass

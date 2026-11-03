@@ -5,6 +5,10 @@ description = "Testcontainers implementation for Python"
 readme = "README.md"
 requires-python = ">=3.11"
 
+dependencies = [
+    "jproperties==2.1.2",
+]
+
 [dependency-groups]
 test = [
     "pytest>=7.0.0",
